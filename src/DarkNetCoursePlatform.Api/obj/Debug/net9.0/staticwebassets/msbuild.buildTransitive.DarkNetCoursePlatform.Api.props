@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\buildMultiTargeting\DarkNetCoursePlatform.Api.props" />
+</Project>

@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "Hash": "2kRgBH2UcngofozmBuHLyXVcNkmFl5icGwBaYdxouGQ=",
+  "Source": "DarkNetCoursePlatform.Api",
+  "BasePath": "_content/DarkNetCoursePlatform.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": []
+}
