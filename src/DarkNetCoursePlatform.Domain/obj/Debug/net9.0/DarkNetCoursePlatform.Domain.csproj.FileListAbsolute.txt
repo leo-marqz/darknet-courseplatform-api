@@ -1,0 +1,12 @@
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\bin\Debug\net9.0\DarkNetCoursePlatform.Domain.deps.json
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\bin\Debug\net9.0\DarkNetCoursePlatform.Domain.dll
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\bin\Debug\net9.0\DarkNetCoursePlatform.Domain.pdb
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\DarkNetCoursePlatform.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\DarkNetCoursePlatform.Domain.AssemblyInfoInputs.cache
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\DarkNetCoursePlatform.Domain.AssemblyInfo.cs
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\DarkNetCoursePlatform.Domain.csproj.CoreCompileInputs.cache
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\DarkNetCoursePlatform.Domain.sourcelink.json
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\DarkNetCoursePlatform.Domain.dll
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\refint\DarkNetCoursePlatform.Domain.dll
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\DarkNetCoursePlatform.Domain.pdb
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Domain\obj\Debug\net9.0\ref\DarkNetCoursePlatform.Domain.dll

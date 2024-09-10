@@ -31,3 +31,4 @@ D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\obj\Debug\net9.0
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\obj\Debug\net9.0\DarkNetCoursePlatform.Api.pdb
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\obj\Debug\net9.0\DarkNetCoursePlatform.Api.genruntimeconfig.cache
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\obj\Debug\net9.0\ref\DarkNetCoursePlatform.Api.dll
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\obj\Debug\net9.0\DarkNetCoursePlatform.Api.sourcelink.json

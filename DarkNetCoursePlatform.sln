@@ -5,7 +5,11 @@ VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{13BCDBA8-5359-4285-9AAC-A16DA05A5432}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkNetCoursePlatform.Api", "src\DarkNetCoursePlatform.Api\DarkNetCoursePlatform.Api.csproj", "{637FF448-DF9F-4AAC-8480-ADCB51B900AB}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = " .Api", "src\DarkNetCoursePlatform.Api\DarkNetCoursePlatform.Api.csproj", "{637FF448-DF9F-4AAC-8480-ADCB51B900AB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkNetCoursePlatform.Domain", "src\DarkNetCoursePlatform.Domain\DarkNetCoursePlatform.Domain.csproj", "{74FE0A44-6658-471D-88A9-816A65CACB29}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkNetCoursePlatform.Persistence", "src\DarkNetCoursePlatform.Persistence\DarkNetCoursePlatform.Persistence.csproj", "{5E164ED9-0F6C-4567-B234-694B3631AC2E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -20,8 +24,18 @@ Global
 		{637FF448-DF9F-4AAC-8480-ADCB51B900AB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{637FF448-DF9F-4AAC-8480-ADCB51B900AB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{637FF448-DF9F-4AAC-8480-ADCB51B900AB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74FE0A44-6658-471D-88A9-816A65CACB29}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74FE0A44-6658-471D-88A9-816A65CACB29}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74FE0A44-6658-471D-88A9-816A65CACB29}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74FE0A44-6658-471D-88A9-816A65CACB29}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E164ED9-0F6C-4567-B234-694B3631AC2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E164ED9-0F6C-4567-B234-694B3631AC2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E164ED9-0F6C-4567-B234-694B3631AC2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E164ED9-0F6C-4567-B234-694B3631AC2E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{637FF448-DF9F-4AAC-8480-ADCB51B900AB} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
+		{74FE0A44-6658-471D-88A9-816A65CACB29} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
+		{5E164ED9-0F6C-4567-B234-694B3631AC2E} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
 	EndGlobalSection
 EndGlobal
