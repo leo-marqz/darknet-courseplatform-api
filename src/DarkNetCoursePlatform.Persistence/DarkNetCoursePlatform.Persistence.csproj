@@ -25,6 +25,7 @@
   </ItemGroup>
 
   <PropertyGroup>
+    <!-- <OutPutType>Exe</OutPutType> Te permite ejecutar el proyecto desde la terminal -->
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>

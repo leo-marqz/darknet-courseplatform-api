@@ -14,3 +14,5 @@ D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Persistence\obj\Debu
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Persistence\obj\Debug\net9.0\refint\DarkNetCoursePlatform.Persistence.dll
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Persistence\obj\Debug\net9.0\DarkNetCoursePlatform.Persistence.pdb
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Persistence\obj\Debug\net9.0\ref\DarkNetCoursePlatform.Persistence.dll
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Persistence\bin\Debug\net9.0\DarkNetCoursePlatform.Persistence.runtimeconfig.json
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Persistence\obj\Debug\net9.0\DarkNetCoursePlatform.Persistence.genruntimeconfig.cache
