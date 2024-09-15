@@ -7,6 +7,15 @@ namespace DarkNetCoursePlatform.Persistence;
 
 public class DarkNetCoursePlatformDbContext : DbContext
 {
+    
+    //Tables
+    public DbSet<Course> Courses { get; set; } // DbSet for Course model
+    public DbSet<Price> Prices { get; set; } // DbSet for Price model
+    public DbSet<Rating> Ratings { get; set; } // DbSet for Rating model
+    public DbSet<Picture> Pictures { get; set; } // DbSet for Picture model
+    public DbSet<Instructor> Instructors { get; set; } // DbSet for Instructor model
+    
+
     // public DarkNetCoursePlatformDbContext(DbContextOptions options) : base(options){}
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
     {
@@ -67,6 +76,9 @@ public class DarkNetCoursePlatformDbContext : DbContext
                 (ci)=>ci.HasKey(ci=>new{ci.CourseId,ci.InstructorId}) // Composite key
             );
 
+            modelBuilder.Entity<Course>().HasData(DataFakeMaster().Item1);
+            modelBuilder.Entity<Price>().HasData(DataFakeMaster().Item2);
+            modelBuilder.Entity<Instructor>().HasData(DataFakeMaster().Item3);
     }
 
     private Tuple<Course[], Price[], Instructor[]> DataFakeMaster(){
@@ -100,11 +112,7 @@ public class DarkNetCoursePlatformDbContext : DbContext
         
         var instructors = fakerInstructors.Generate(10);
 
-        return null;
+        return Tuple.Create(courses.ToArray(), prices.ToArray(), instructors.ToArray());
     }
-    public DbSet<Course> Courses { get; set; } // DbSet for Course model
-    public DbSet<Price> Prices { get; set; } // DbSet for Price model
-    public DbSet<Rating> Ratings { get; set; } // DbSet for Rating model
-    public DbSet<Picture> Pictures { get; set; } // DbSet for Picture model
-    public DbSet<Instructor> Instructors { get; set; } // DbSet for Instructor model
+
 }
