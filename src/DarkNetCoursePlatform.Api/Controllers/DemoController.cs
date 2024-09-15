@@ -19,7 +19,10 @@ namespace DarkNetCoursePlatform.Api.Controllers
         public IActionResult Get()
         {
             _logger.LogInformation("GET request received");
-            return Ok("Hello from DarkNetCoursePlatform.Api");
+            return Ok(new {
+                status = 200,
+                message = "Hello from DarkNetCoursePlatform.Api"
+            });
         }
     }
 }
