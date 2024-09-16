@@ -3,6 +3,7 @@ using System;
 using DarkNetCoursePlatform.Persistence;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace DarkNetCoursePlatform.Persistence.Migrations
 {
     [DbContext(typeof(DarkNetCoursePlatformDbContext))]
-    partial class DarkNetCoursePlatformDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240916025931_SecurityMigration")]
+    partial class SecurityMigration
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "9.0.0-preview.2.24128.4");
