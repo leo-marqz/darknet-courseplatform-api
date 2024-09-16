@@ -1,13 +1,17 @@
 
+using System;
+using System.Collections.Generic;
 using Bogus;
 using DarkNetCoursePlatform.Domain.Models;
+using DarkNetCoursePlatform.Persistence.SystemModels;
+using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace DarkNetCoursePlatform.Persistence;
 
-public class DarkNetCoursePlatformDbContext : DbContext
+public class DarkNetCoursePlatformDbContext : IdentityDbContext<ApplicationUser>
 {
-    
     //Tables
     public DbSet<Course> Courses { get; set; } // DbSet for Course model
     public DbSet<Price> Prices { get; set; } // DbSet for Price model
@@ -79,6 +83,64 @@ public class DarkNetCoursePlatformDbContext : DbContext
             modelBuilder.Entity<Course>().HasData(DataFakeMaster().Item1);
             modelBuilder.Entity<Price>().HasData(DataFakeMaster().Item2);
             modelBuilder.Entity<Instructor>().HasData(DataFakeMaster().Item3);
+
+        LoadSecurityModelData(modelBuilder);
+    }
+
+    private void LoadSecurityModelData(ModelBuilder modelBuilder)
+    {
+        var adminId = Guid.NewGuid().ToString();
+        var clientId = Guid.NewGuid().ToString();
+
+        //role admin
+        modelBuilder.Entity<IdentityRole>()
+            .HasData( new IdentityRole {
+                Id = adminId,
+                Name = SystemRoles.ADMIN,
+                NormalizedName = SystemRoles.ADMIN
+            });
+
+        // permissions role admin
+        modelBuilder.Entity<IdentityRoleClaim<string>>()
+            .HasData( new IdentityRoleClaim<string> {
+                Id = 1,
+                RoleId = adminId,
+                ClaimType = SystemClaims.POLICIES,
+                ClaimValue = SystemPolicies.SUPER_ADMIN,
+            });
+
+        // role client
+        modelBuilder.Entity<IdentityRole>()
+            .HasData( new IdentityRole {
+                Id = clientId,
+                Name = SystemRoles.CLIENT,
+                NormalizedName = SystemRoles.CLIENT
+            });
+        
+        // permissions role client
+        modelBuilder.Entity<IdentityRoleClaim<string>>()
+            .HasData( new IdentityRoleClaim<string> {
+                Id = 2,
+                RoleId = clientId,
+                ClaimType = SystemClaims.POLICIES,
+                ClaimValue = SystemPolicies.COURSE_READ,
+            }, new IdentityRoleClaim<string> {
+                Id = 3,
+                RoleId = clientId,
+                ClaimType = SystemClaims.POLICIES,
+                ClaimValue = SystemPolicies.RATING_READ,
+            }, new IdentityRoleClaim<string> {
+                Id = 4,
+                RoleId = clientId,
+                ClaimType = SystemClaims.POLICIES,
+                ClaimValue = SystemPolicies.INSTRUCTOR_READ,
+            },
+            new IdentityRoleClaim<string> {
+                Id = 5,
+                RoleId = clientId,
+                ClaimType = SystemClaims.POLICIES,
+                ClaimValue = SystemPolicies.RATING_CREATE,
+            });
     }
 
     private Tuple<Course[], Price[], Instructor[]> DataFakeMaster(){
