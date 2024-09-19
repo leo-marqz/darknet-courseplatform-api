@@ -110,7 +110,7 @@ public class DarkNetCoursePlatformDbContext : IdentityDbContext<ApplicationUser>
             });
 
         // role client
-        modelBuilder.Entity<IdentityRole>()
+        modelBuilder.Entity<IdentityRole>() 
             .HasData( new IdentityRole {
                 Id = clientId,
                 Name = SystemRoles.CLIENT,
