@@ -11,7 +11,7 @@ namespace DarkNetCoursePlatform.Application.Courses.CreateCourse
         public string Description { get; set; }
         public DateTime Release { get; set; }
         public IFormFile Picture { get; set; }
-        public Guid InstructorId { get; set; }
-        public Guid PriceId { get; set; }
+        public Guid? InstructorId { get; set; }
+        public Guid? PriceId { get; set; }
     }
 }

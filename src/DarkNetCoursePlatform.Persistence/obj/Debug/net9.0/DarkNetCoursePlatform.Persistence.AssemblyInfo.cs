@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("DarkNetCoursePlatform.Persistence")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ed80a60cec39ba809e2e637568ee1efa5f664b72")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75a8b561cf2cec75bf7c70fe7b14176dd91fae32")]
 [assembly: System.Reflection.AssemblyProductAttribute("DarkNetCoursePlatform.Persistence")]
 [assembly: System.Reflection.AssemblyTitleAttribute("DarkNetCoursePlatform.Persistence")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
