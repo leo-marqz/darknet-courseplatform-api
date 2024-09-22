@@ -1,4 +1,5 @@
 
+using DarkNetCoursePlatform.Api.Extensions;
 using DarkNetCoursePlatform.Application;
 using DarkNetCoursePlatform.Persistence;
 
@@ -26,6 +27,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+await app.seedDataAuthenticationAsync();
 // app.UseHttpsRedirection();
 
 app.MapControllers(); // map the controllers
