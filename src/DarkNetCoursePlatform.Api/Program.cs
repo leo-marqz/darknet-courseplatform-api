@@ -1,4 +1,7 @@
 
+using DarkNetCoursePlatform.Application;
+using DarkNetCoursePlatform.Persistence;
+
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -10,6 +13,9 @@ builder.Services.AddControllers(); // add the controllers
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 builder.Services.AddRouting((option)=> option.LowercaseUrls = true);
+
+builder.Services.AddApplicationDependencyInjections(); // add the application dependencies
+builder.Services.AddPersistenceDependencyInjections(builder.Configuration); // add the persistence dependencies
 
 var app = builder.Build();
 

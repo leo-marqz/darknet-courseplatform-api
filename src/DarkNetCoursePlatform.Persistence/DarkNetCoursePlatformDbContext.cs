@@ -20,17 +20,18 @@ public class DarkNetCoursePlatformDbContext : IdentityDbContext<ApplicationUser>
     public DbSet<Instructor> Instructors { get; set; } // DbSet for Instructor model
     
 
-    // public DarkNetCoursePlatformDbContext(DbContextOptions options) : base(options){}
-    protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
-    {
-        // Use SQLite database
-        optionsBuilder.UseSqlite("Data Source=DarkNetCoursePlatform.db")
-                      .LogTo(
-                            Console.WriteLine, // Log to console
-                            new []{ DbLoggerCategory.Database.Command.Name }, // Log only database commands 
-                            Microsoft.Extensions.Logging.LogLevel.Information ) // Log level
-                        .EnableSensitiveDataLogging(); // Enable sensitive data logging
-    }
+    public DarkNetCoursePlatformDbContext(DbContextOptions options) : base(options){}
+    
+    // protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+    // {
+    //     // Use SQLite database
+    //     optionsBuilder.UseSqlite("Data Source=DarkNetCoursePlatform.db")
+    //                   .LogTo(
+    //                         Console.WriteLine, // Log to console
+    //                         new []{ DbLoggerCategory.Database.Command.Name }, // Log only database commands 
+    //                         Microsoft.Extensions.Logging.LogLevel.Information ) // Log level
+    //                     .EnableSensitiveDataLogging(); // Enable sensitive data logging
+    // }
 
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
