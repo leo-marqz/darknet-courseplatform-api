@@ -1,6 +1,9 @@
 
 using DarkNetCoursePlatform.Api.Extensions;
+using DarkNetCoursePlatform.Api.Middlewares;
 using DarkNetCoursePlatform.Application;
+using DarkNetCoursePlatform.Application.Services.Reports;
+using DarkNetCoursePlatform.Infrastructure.Reports;
 using DarkNetCoursePlatform.Persistence;
 using DarkNetCoursePlatform.Persistence.SystemModels;
 using Microsoft.AspNetCore.Builder;
@@ -19,6 +22,8 @@ builder.Services.AddRouting((option)=> option.LowercaseUrls = true);
 builder.Services.AddApplicationDependencyInjections(); // add the application dependencies
 builder.Services.AddPersistenceDependencyInjections(builder.Configuration); // add the persistence dependencies
 
+builder.Services.AddScoped(typeof(IReportService<>), typeof(ReportService<>)); // add the report service
+
 builder.Services.AddIdentityCore<ApplicationUser>((options)=>{
     options.Password.RequireDigit = true;
     options.Password.RequireLowercase = true;
@@ -30,6 +35,8 @@ builder.Services.AddIdentityCore<ApplicationUser>((options)=>{
   .AddEntityFrameworkStores<DarkNetCoursePlatformDbContext>();
 
 var app = builder.Build();
+
+app.UseMiddleware<ExceptionMiddleware>(); // add the exception middleware
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

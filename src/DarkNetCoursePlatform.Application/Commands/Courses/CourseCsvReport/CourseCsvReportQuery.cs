@@ -9,7 +9,7 @@ using DarkNetCoursePlatform.Persistence;
 using MediatR;
 using Microsoft.EntityFrameworkCore;
 
-namespace DarkNetCoursePlatform.Application.Courses.CourseCsvReport
+namespace DarkNetCoursePlatform.Application.Commands.Courses.CourseCsvReport
 {
     public class CourseCsvReportQuery
     {

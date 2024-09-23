@@ -2,12 +2,11 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
-using DarkNetCoursePlatform.Application.Courses.CreateCourse;
+using DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
-using static DarkNetCoursePlatform.Application.Courses.CourseCsvReport.CourseCsvReportQuery;
-using static DarkNetCoursePlatform.Application.Courses.CreateCourse.CreateCourseCommand;
-
+using static DarkNetCoursePlatform.Application.Commands.Courses.CourseCsvReport.CourseCsvReportQuery;
+using static DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse.CreateCourseCommand;
 namespace DarkNetCoursePlatform.Api.Controllers;
 
 [ApiController]

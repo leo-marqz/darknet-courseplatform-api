@@ -5,7 +5,7 @@ using DarkNetCoursePlatform.Domain.Models;
 using DarkNetCoursePlatform.Persistence;
 using MediatR;
 
-namespace DarkNetCoursePlatform.Application.Courses.CreateCourse;
+namespace DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse;
 
 public class CreateCourseCommand
 {

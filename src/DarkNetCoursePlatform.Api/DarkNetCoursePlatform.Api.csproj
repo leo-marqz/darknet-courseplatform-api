@@ -17,6 +17,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DarkNetCoursePlatform.Application\DarkNetCoursePlatform.Application.csproj" />
+    <ProjectReference Include="..\DarkNetCoursePlatform.Infrastructure\DarkNetCoursePlatform.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>

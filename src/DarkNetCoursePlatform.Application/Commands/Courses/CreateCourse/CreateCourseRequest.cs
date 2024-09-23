@@ -3,7 +3,7 @@
 using System;
 using Microsoft.AspNetCore.Http;
 
-namespace DarkNetCoursePlatform.Application.Courses.CreateCourse
+namespace DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse
 {
     public class CreateCourseRequest
     {
