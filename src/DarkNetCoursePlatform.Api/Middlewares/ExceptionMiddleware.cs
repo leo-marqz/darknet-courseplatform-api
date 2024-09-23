@@ -23,7 +23,7 @@ namespace DarkNetCoursePlatform.Api.Middlewares
             _env = env;
         }
 
-        public async Task InvokeAsync(HttpContext context, RequestDelegate next)
+        public async Task InvokeAsync(HttpContext context)
         {
             try
             {

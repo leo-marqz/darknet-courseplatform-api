@@ -1,6 +1,7 @@
 using System;
 using System.Threading;
 using System.Threading.Tasks;
+using DarkNetCoursePlatform.Application.Core;
 using DarkNetCoursePlatform.Domain.Models;
 using DarkNetCoursePlatform.Persistence;
 using MediatR;
@@ -9,9 +10,9 @@ namespace DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse;
 
 public class CreateCourseCommand
 {
-    public record CreateCourseCommandRequest(CreateCourseRequest createRequest) : IRequest<Guid>;
+    public record CreateCourseCommandRequest(CreateCourseRequest createRequest) : IRequest<Result<Guid>>;
 
-    internal class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommandRequest, Guid>
+    internal class CreateCourseCommandHandler : IRequestHandler<CreateCourseCommandRequest, Result<Guid> >
     {
         private readonly DarkNetCoursePlatformDbContext _context;
 
@@ -20,7 +21,7 @@ public class CreateCourseCommand
             _context = context;
         }
 
-        public async Task<Guid> Handle(CreateCourseCommandRequest commandRequest, CancellationToken cancellationToken)
+        public async Task<Result<Guid>> Handle(CreateCourseCommandRequest commandRequest, CancellationToken cancellationToken)
         {
             var course = new Course {
                 Id = Guid.NewGuid(),
@@ -30,9 +31,11 @@ public class CreateCourseCommand
             };
             
             _context.Courses.Add(course);
-            await _context.SaveChangesAsync(cancellationToken);
+            var result = await _context.SaveChangesAsync(cancellationToken);
 
-            return course.Id;
+            return result > 0
+                ? Result<Guid>.Success(course.Id)
+                : Result<Guid>.Failure("Failed to create course");
         }
     }
 }

@@ -3,6 +3,7 @@ using System;
 using System.Threading;
 using System.Threading.Tasks;
 using DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse;
+using DarkNetCoursePlatform.Application.Core;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using static DarkNetCoursePlatform.Application.Commands.Courses.CourseCsvReport.CourseCsvReportQuery;
@@ -21,11 +22,10 @@ public class CoursesController : ControllerBase
     }
 
     [HttpPost("create")]
-    public async Task<ActionResult<Guid>> CreateCourse([FromForm] CreateCourseRequest request, CancellationToken cancellationToken)
+    public async Task<ActionResult<Result<Guid>>> CreateCourse([FromForm] CreateCourseRequest request, CancellationToken cancellationToken)
     {
         var command = new CreateCourseCommandRequest(request);
-        var result = await _sender.Send(command, cancellationToken);
-        return Ok(result);
+        return await _sender.Send(command, cancellationToken);
     }
 
     [HttpGet("get-csv-report")]
