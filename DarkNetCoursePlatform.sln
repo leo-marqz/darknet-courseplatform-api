@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkNetCoursePlatform.Persi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkNetCoursePlatform.Application", "src\DarkNetCoursePlatform.Application\DarkNetCoursePlatform.Application.csproj", "{5DA97D60-EB67-4CE8-8CDE-5E82439B4550}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DarkNetCoursePlatform.Infrastructure", "src\DarkNetCoursePlatform.Infrastructure\DarkNetCoursePlatform.Infrastructure.csproj", "{355BD9A2-806C-415F-9DB0-D7ED1D462B04}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -38,11 +40,16 @@ Global
 		{5DA97D60-EB67-4CE8-8CDE-5E82439B4550}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5DA97D60-EB67-4CE8-8CDE-5E82439B4550}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5DA97D60-EB67-4CE8-8CDE-5E82439B4550}.Release|Any CPU.Build.0 = Release|Any CPU
+		{355BD9A2-806C-415F-9DB0-D7ED1D462B04}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{355BD9A2-806C-415F-9DB0-D7ED1D462B04}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{355BD9A2-806C-415F-9DB0-D7ED1D462B04}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{355BD9A2-806C-415F-9DB0-D7ED1D462B04}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{637FF448-DF9F-4AAC-8480-ADCB51B900AB} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
 		{74FE0A44-6658-471D-88A9-816A65CACB29} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
 		{5E164ED9-0F6C-4567-B234-694B3631AC2E} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
 		{5DA97D60-EB67-4CE8-8CDE-5E82439B4550} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
+		{355BD9A2-806C-415F-9DB0-D7ED1D462B04} = {13BCDBA8-5359-4285-9AAC-A16DA05A5432}
 	EndGlobalSection
 EndGlobal
