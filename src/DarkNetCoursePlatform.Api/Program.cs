@@ -9,7 +9,7 @@ using DarkNetCoursePlatform.Persistence.SystemModels;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.Extensions.DependencyInjection;
-using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Hosting; 
 
 var builder = WebApplication.CreateBuilder(args);
 

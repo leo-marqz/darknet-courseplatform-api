@@ -4,6 +4,7 @@ using System.Threading.Tasks;
 using DarkNetCoursePlatform.Application.Core;
 using DarkNetCoursePlatform.Domain.Models;
 using DarkNetCoursePlatform.Persistence;
+using FluentValidation;
 using MediatR;
 
 namespace DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse;
@@ -36,6 +37,12 @@ public class CreateCourseCommand
             return result > 0
                 ? Result<Guid>.Success(course.Id)
                 : Result<Guid>.Failure("Failed to create course");
+        }
+    }
+
+    public class CreateCommandRequestValidator : AbstractValidator<CreateCourseCommandRequest>{
+        public CreateCommandRequestValidator(){
+            RuleFor((cls)=>cls.createRequest).SetValidator(new CreateCourseValidator());
         }
     }
 }

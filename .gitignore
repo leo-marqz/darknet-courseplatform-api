@@ -1,0 +1,14 @@
+src/DarkNetCoursePlatform.Api/DarkNetCoursePlatform.db
+src/DarkNetCoursePlatform.Api/DarkNetCoursePlatform.db-shm
+src/DarkNetCoursePlatform.Api/DarkNetCoursePlatform.db-wal
+src/DarkNetCoursePlatform.Api/bin/
+src/DarkNetCoursePlatform.Api/obj/
+src/DarkNetCoursePlatform.Api/Properties/launchSettings.Production.json
+src/DarkNetCoursePlatform.Application/bin/
+src/DarkNetCoursePlatform.Application/obj/
+src/DarkNetCoursePlatform.Infrastructure/bin/
+src/DarkNetCoursePlatform.Infrastructure/obj/
+src/DarkNetCoursePlatform.Domain/bin/
+src/DarkNetCoursePlatform.Domain/obj/
+src/DarkNetCoursePlatform.Persistence/bin/
+src/DarkNetCoursePlatform.Persistence/obj/

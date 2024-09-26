@@ -145,3 +145,5 @@ D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\bin\Debug\net9.0
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\bin\Debug\net9.0\CsvHelper.dll
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\bin\Debug\net9.0\DarkNetCoursePlatform.Infrastructure.dll
 D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\bin\Debug\net9.0\DarkNetCoursePlatform.Infrastructure.pdb
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\bin\Debug\net9.0\appsettings.Production.json
+D:\Learning\DarkNetCoursePlatform\src\DarkNetCoursePlatform.Api\bin\Debug\net9.0\appsettings.Staging.json

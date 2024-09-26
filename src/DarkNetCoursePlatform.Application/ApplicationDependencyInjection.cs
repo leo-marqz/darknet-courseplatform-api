@@ -1,4 +1,7 @@
 
+using DarkNetCoursePlatform.Application.Commands.Courses.CreateCourse;
+using FluentValidation;
+using FluentValidation.AspNetCore;
 using Microsoft.Extensions.DependencyInjection;
 
 namespace DarkNetCoursePlatform.Application
@@ -12,6 +15,8 @@ namespace DarkNetCoursePlatform.Application
                     assemblies: typeof(ApplicationDependencyInjection).Assembly 
                 );
             });
+            services.AddFluentValidationAutoValidation(); // add the fluent validation
+            services.AddValidatorsFromAssemblyContaining<CreateCourseCommand>(); // add the validators
             
             return services;
         }
